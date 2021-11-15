@@ -6,7 +6,6 @@ To experiment with this code, add some sample content and run `bundle exec jekyl
 
 TODO: Delete this and the text above, and describe your gem
 
-
 ## Installation
 
 Add this line to your Jekyll site's `Gemfile`:
@@ -23,11 +22,15 @@ theme: hydn
 
 And then execute:
 
-    $ bundle
+```bash
+$ bundle
+```
 
 Or install it yourself as:
 
-    $ gem install hydn
+```bash
+$ gem install hydn
+```
 
 ## Usage
 
@@ -49,4 +52,3 @@ To add a custom directory to your theme-gem, please edit the regexp in `hydn.gem
 ## License
 
 The theme is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
-
