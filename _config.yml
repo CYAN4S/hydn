@@ -1,10 +1,10 @@
 title: Hydn
-email: me@cyan4s.com
+email:
 description: >-
   Hydn 기술 블로그
 
 baseurl: ""
-url: https://blog.cyan4s.com
+url:
 # avatar: *.jpg
 
 #twitter_username:
@@ -24,11 +24,7 @@ disqus_shortname: xxxxxxxx
 social:
   name: Hydn
   links:
-#    - https://www.cyan4s.com
-#    - https://github.com/CYAN4S
-#    - https://twitter.com/cyan4s
-#    - https://www.behance.net/CYAN4S
-#    - https://blog.cyan4s.com
+
 
 navigation: True
 # Navigation bar link를 보여줄건지 여부
