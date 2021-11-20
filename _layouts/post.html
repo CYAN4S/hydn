@@ -1,5 +1,13 @@
 ---
 layout: default
+current: post
 ---
+
+<p>{{ page.date | date:'%e %B %Y' }} - Written by {{ page.author }}</p>
+
+{{ page.title }}
+
+{% if page.cover %}
+{% endif %}
 
 {{ content }}

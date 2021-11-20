@@ -1,0 +1,56 @@
+title: Hydn
+email:
+description: >-
+  Hydn 기술 블로그
+
+baseurl: ""
+url:
+# avatar: *.jpg
+
+#twitter_username:
+#github_username:
+#facebook_username:
+#instagram_username:
+
+logo:
+lang: ko_KR
+
+# Disqus
+disqus: False
+disqus_shortname: xxxxxxxx
+# disqus는 온라인 댓글 시스템. 댓글 기능을 사용하기 위해 disqus를 이용할 것인지 여부와 만약 사용하면
+# disqus shortname을 입력 ( disqus username이 아님 )
+
+social:
+  name: Hydn
+  links:
+
+
+navigation: True
+# Navigation bar link를 보여줄건지 여부
+
+subscribers: True
+# subscriber 기능을 사용할건지의 여부
+
+#defaults:
+#  - scope:
+#      path: ""
+#      type: "posts"
+#    values:
+#      layout: "post"
+#  - scope:
+#      path: ""
+#    values:
+#      layout: "default"
+#      image: "/assets/img/default/thumbnail.png"
+
+plugins:
+  - jekyll-sitemap
+  - jekyll-seo-tag
+# [jekyll-paginate, jekyll-feed, jekyll-gist]
+
+# Travis-CI 설정
+safe: false
+lsi: false
+
+highlighter: rouge
