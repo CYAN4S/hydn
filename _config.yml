@@ -2,7 +2,6 @@ title: Hydn
 email:
 description: >-
   Hydn 기술 블로그
-
 baseurl: ""
 url:
 # avatar: *.jpg
@@ -45,12 +44,6 @@ subscribers: True
 #      image: "/assets/img/default/thumbnail.png"
 
 plugins:
-  - jekyll-sitemap
   - jekyll-seo-tag
-# [jekyll-paginate, jekyll-feed, jekyll-gist]
 
-# Travis-CI 설정
-safe: false
-lsi: false
-
-highlighter: rouge
+theme: hydn
