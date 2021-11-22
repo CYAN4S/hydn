@@ -1,8 +1,3 @@
----
-layout: default
----
-<h1>{{ site.title }}</h1>
-
 <nav>
     <ul class="nav" role="menu">
         <li class="nav-home" role="menuitem"><a href="{{site.baseurl}}">Home</a></li>
@@ -12,7 +7,3 @@ layout: default
         <li class="nav-TagPost" role="menuitem"><a href="{{site.baseurl}}tagpost/">Tag 별 Post</a></li>
     </ul>
 </nav>
-
-<img src="https://t1.daumcdn.net/cfile/tistory/193EB8404DC4FE6613" width="700" alt="배경 사진" />
-
-{% for post in site.posts %} {% include postlist-item.html %} {% endfor %}
