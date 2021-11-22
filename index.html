@@ -3,15 +3,7 @@ layout: default
 ---
 <h1>{{ site.title }}</h1>
 
-<nav>
-    <ul class="nav" role="menu">
-        <li class="nav-home" role="menuitem"><a href="{{site.baseurl}}">Home</a></li>
-        <li class="nav-about" role="menuitem"><a href="{{site.baseurl}}about/">About</a></li>
-        <li class="nav-Post" role="menuitem"><a href="{{site.baseurl}}post/">Post</a></li>
-        <li class="nav-AllPost" role="menuitem"><a href="{{site.baseurl}}allpost/">All Post</a></li>
-        <li class="nav-TagPost" role="menuitem"><a href="{{site.baseurl}}tagpost/">Tag 별 Post</a></li>
-    </ul>
-</nav>
+{% include navigation.html %}
 
 <img src="https://t1.daumcdn.net/cfile/tistory/193EB8404DC4FE6613" width="700" alt="배경 사진" />
 
