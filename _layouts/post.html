@@ -3,7 +3,9 @@ layout: default
 current: post
 ---
 
-<p>{{ page.date | date:'%e %B %Y' }} - Written by {{ page.author }}</p>
+{% assign author = site.authors | where: 'short_name', page.author | first %}
+
+<p>{{ page.date | date:'%e %B %Y' }} - Written by {% if author %}{{ author.name }}{% else %}{{ page.author }}{% endif %}</p>
 
 {{ page.title }}
 

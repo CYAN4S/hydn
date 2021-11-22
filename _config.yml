@@ -48,3 +48,6 @@ plugins:
   - jekyll-seo-tag
 
 theme: hydn
+
+collections:
+  authors:
