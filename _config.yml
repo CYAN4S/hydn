@@ -1,5 +1,5 @@
 title: Hydn
-email:
+email: example@example.com
 description: >-
   Hydn 기술 블로그
 baseurl: ""
@@ -31,17 +31,12 @@ navigation: True
 subscribers: True
 # subscriber 기능을 사용할건지의 여부
 
-#defaults:
-#  - scope:
-#      path: ""
-#      type: "posts"
-#    values:
-#      layout: "post"
-#  - scope:
-#      path: ""
-#    values:
-#      layout: "default"
-#      image: "/assets/img/default/thumbnail.png"
+defaults:
+ - scope:
+     path: ""
+     type: "posts"
+   values:
+     layout: "post"
 
 plugins:
   - jekyll-seo-tag
