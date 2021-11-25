@@ -50,3 +50,5 @@ theme: hydn
 
 collections:
   authors:
+    output: true
+    permalink : /:collection/:name

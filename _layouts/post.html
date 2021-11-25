@@ -5,7 +5,7 @@ current: post
 
 {% assign author = site.authors | where: 'short_name', page.author | first %}
 
-<p>{{ page.date | date:'%e %B %Y' }} - Written by {% if author %}{{ author.name }}{% else %}{{ page.author }}{% endif %}</p>
+<p>{{ page.date | date:'%e %B %Y' }} - Written by {% if author %} <a href = "{{site.baseurl}}/authors/{{ author.short_name }}.md">{{ author.name }} </a>{% else %}{{ page.author }}{% endif %}</p>
 
 {{ page.title }}
 
