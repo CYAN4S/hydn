@@ -53,3 +53,5 @@ sass:
 
 collections:
   authors:
+    output: true
+    permalink : /:collection/:name
