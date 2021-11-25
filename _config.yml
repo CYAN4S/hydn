@@ -49,7 +49,7 @@ plugins:
 theme: Hydn
 
 sass:
-  sass_dir: _sass
+  sass_dir: _sass/hydn
 
 collections:
   authors:
