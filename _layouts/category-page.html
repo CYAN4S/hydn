@@ -1,0 +1,23 @@
+---
+layout: default
+---
+
+<h2>{{ page.name | upcase }} 카테고리</h2>
+
+{{ content }}
+
+<h3>포스트 목록</h3>
+
+<ul>
+  {% for post in site.posts %} 
+  {% if post.categories contains page.title or post.category == page.title %}
+  <li>
+    <div>
+      <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+      <p>{{ post.excerpt }}</p>
+      <p>{{ post.date | date: "%Y/%m/%d" }}</p>
+    </div>
+  </li>
+  {% endif %} 
+  {% endfor %}
+</ul>

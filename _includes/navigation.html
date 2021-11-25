@@ -5,5 +5,8 @@
         <li class="nav-AllPost" role="menuitem"><a href="{{site.baseurl}}allpost/">All Post</a></li>
         <li class="nav-TagPost" role="menuitem"><a href="{{site.baseurl}}tagpost/">Tag 별 Post</a></li>
         <li class="nav-TagPost" role="menuitem"><a href="{{site.baseurl}}categorypost/">Category 별 Post</a></li>
+        {% for category in site.category-pages %}
+        <li><a href="{{ category.url }}">{{ category.title }}</a></li>
+        {% endfor %}
     </ul>
 </nav>

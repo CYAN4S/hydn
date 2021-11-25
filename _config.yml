@@ -32,11 +32,17 @@ subscribers: True
 # subscriber 기능을 사용할건지의 여부
 
 defaults:
- - scope:
-     path: ""
-     type: "posts"
-   values:
-     layout: "post"
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+  - scope:
+      path: ""
+      type: "category-pages"
+    values:
+      layout: "category-page"
+      permalink: /category/:title
 
 plugins:
   - jekyll-seo-tag
@@ -45,3 +51,5 @@ theme: hydn
 
 collections:
   authors:
+  category-pages:
+    output: true
