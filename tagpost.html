@@ -2,9 +2,19 @@
 layout: default
 title: "Tags"
 ---
+<style>
+    #tagbox{
+        display : grid;
+        grid-template-rows: 50px ;
+        background: rgb(175, 183, 231);
+        width : 80%;
+        color : rgb(62, 51, 206);
+    }
+</style>
 
 
 {% for tag in site.tags %}
+<div id = "tagbox">
 <h2>{{ tag[0]}} </h2>
 <ul>
     {% for post in tag[1] %}
@@ -12,5 +22,9 @@ title: "Tags"
         <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
     </li>
     {% endfor %}
+    </div>
+    <br><br>
 </ul>
 {% endfor %}
+
+
