@@ -13,7 +13,9 @@ title: "Tags"
 </style>
 
 
-{% for tag in site.tags %}
+
+{% assign tags = site.tags | sort %}
+{% for tag in tags %}
 <div id = "tagbox">
 <h2>{{ tag[0]}} </h2>
 <ul>
