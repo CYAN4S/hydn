@@ -5,18 +5,27 @@ current: post
 
 {% assign author = site.authors | where: 'short_name', page.author | first %}
 <main>
+  <p>{{ page.date | date:'%e %B %Y' }}</p>
   <p>
-    {{ page.date | date:'%e %B %Y' }} - Written by {% if author %} {{
-    author.name }} {% elsif page.author %} {{ page.author }} {% else %}
-    Anonymous {% endif %}
+    Written by
+    {% if author %} 
+    <a href="{{ author.url }}">{{ author.name }}</a>
+    {% elsif page.author %} 
+    {{ page.author }} 
+    {% else %} 
+    Anonymous 
+    {% endif %}
   </p>
 
   <h1>{{ page.title }}</h1>
 
   {% if page.cover %}
-  <img src="{{ page.cover | relative_url }}" alt="Title image of {{ page.title }}" />
+  <img
+    src="{{ page.cover | relative_url }}"
+    alt="Title image of {{ page.title }}"
+  />
   {% endif %}
-
+  
   {{ content }}
 
   <div class="neighbor">
