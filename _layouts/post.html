@@ -4,12 +4,36 @@ current: post
 ---
 
 {% assign author = site.authors | where: 'short_name', page.author | first %}
+<main>
+  <p>
+    {{ page.date | date:'%e %B %Y' }} - Written by {% if author %} {{
+    author.name }} {% elsif page.author %} {{ page.author }} {% else %}
+    Anonymous {% endif %}
+  </p>
 
-<p>{{ page.date | date:'%e %B %Y' }} - Written by {% if author %}{{ author.name }}{% else %}{{ page.author }}{% endif %}</p>
+  <h1>{{ page.title }}</h1>
 
-{{ page.title }}
+  {% if page.cover %}
+  <img src="{{ page.cover | relative_url }}" alt="Title image of {{ page.title }}" />
+  {% endif %}
 
-{% if page.cover %}
-{% endif %}
+  {{ content }}
 
-{{ content }}
+  <div class="neighbor">
+    <p>이전 글</p>
+
+    {% if page.previous %}
+    <p><a href="{{ page.previous.url | relative_url }}">{{page.previous.title}}</a></p>
+    {% else %}
+    <p>이전 글이 없습니다.</p>
+    {% endif %}
+
+    <p>다음 글</p>
+
+    {% if page.next %}
+    <p><a href="{{ page.next.url | relative_url }}">{{page.next.title}}</a></p>
+    {% else %}
+    <p>다음 글이 없습니다.</p>
+    {% endif %}
+  </div>
+</main>
