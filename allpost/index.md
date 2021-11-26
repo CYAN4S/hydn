@@ -25,4 +25,3 @@ layout: default
         {% for post in site.posts %} <div class = "post-style"> {% include postlist-item.html %} </div>  <br/> <br/>  {% endfor %}
     </body>
 </html>
-
