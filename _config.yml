@@ -54,7 +54,10 @@ defaults:
 plugins:
   - jekyll-seo-tag
 
-theme: hydn
+theme: Hydn
+
+sass:
+  sass_dir: _sass/hydn
 
 collections:
   authors:

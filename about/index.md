@@ -9,6 +9,7 @@ navigation : true
     <head> 
             <meta charset = 'utf-8'/>
             <link rel = "stylesheet" href="../css/about_style.css">
+            <link rel = "stylesheet" href="../css/style.css">
     </head>
     <body>
         <br/><br/><br/>
@@ -74,5 +75,9 @@ navigation : true
                 <p>&nbsp;&nbsp;&nbsp;&nbsp; - 주제별로 작성된 포스트들의 대표내용이 모두 출력됩니다.</p>
             </div>
         </div>
+        <br/><br/>
+        <div class = "editior"> 편집자 손* </div>
+        <div class = "editior"> 편집자 이* </div>
+        <div class = "editior"> 편집자 최* </div>
     </body>
 </html>
