@@ -24,3 +24,16 @@ li {
 a {
   text-decoration: none;
 }
+.postlist {
+  border-bottom: 3px solid #efefef;
+  margin-left: 150px;
+}
+.postlist a{
+  font-family: 'Segoe UI';
+  font-size: 18px;
+}
+.postlist p{
+  color: rgb(80, 79, 79);
+  font-size:15px ;
+  margin-left: 50px;
+}
