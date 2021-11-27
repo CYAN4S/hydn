@@ -61,3 +61,7 @@ collections:
     output: true
   category-pages:
     output: true
+    permalink : /:collection/:name
+
+sass:
+  style : compressed
