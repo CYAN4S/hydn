@@ -1,0 +1,27 @@
+$bp-desktop: 1240px;
+$bp-tablet: 600px;
+$gap: 20px;
+
+section.layout {
+    display: grid;
+    grid-gap: $gap;
+    margin: auto;
+}
+
+@media only screen and (max-width: $bp-tablet) {
+    section.layout {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media only screen and (min-width: $bp-tablet) {
+    section.layout {
+        grid-template-columns: repeat(8, 1fr);
+    }
+}
+
+@media only screen and (min-width: $bp-desktop) {
+    section.layout {
+        grid-template-columns: repeat(12, 1fr);
+    }
+}
