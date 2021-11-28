@@ -12,9 +12,7 @@ navigation : true
     </head>
     <body>
         <br/><br/><br/>
-        <div class = "introduction">
-            <img src="../hydn_logo.png" width="500" height="300" alt="Hydn_Logo"> 
-        </div>
+        <img src="../top_image.jpg" width="100%" height="300" alt="Hydn_Logo">
         <br/><hr size = "3px"/><br/>
         <div class = "page_body">
             <h3>※ 블로그 편집자 정보</h3> 
@@ -23,21 +21,27 @@ navigation : true
         </div>
         <div class = "information">
             <div class = "editior"> 
-                <strong>이름</strong> : 손○○ <br/> 
-                <strong>E-mail</strong> : "" <br/> 
-                <strong>소속</strong> : ○○○○대학교 컴퓨터공학과<br/> 
+                <strong>이름</strong> - 손○○ <br/> 
+                <strong>E-mail</strong> - "" <br/> 
+                <strong>소속</strong> - ○○○○대학교 컴퓨터공학과<br/> 
             </div>
             <div class = "editior"> 
-                <strong>이름</strong> : 이○○ <br/> 
-                <strong>E-mail</strong> : "" <br/> 
-                <strong>소속</strong> : ○○○○대학교 컴퓨터공학과<br/> 
+                <strong>이름</strong> - 이○○ <br/> 
+                <strong>E-mail</strong> - "" <br/> 
+                <strong>소속</strong> - ○○○○대학교 컴퓨터공학과<br/> 
             </div>
             <div class = "editior"> 
-                <strong>이름</strong> : 최○○ <br/> 
-                <strong>E-mail</strong> : "" <br/> 
-                <strong>소속</strong> : ○○○○대학교 컴퓨터공학과<br/> 
+                <strong>이름</strong> - 최○○ <br/> 
+                <strong>E-mail</strong> - "" <br/> 
+                <strong>소속</strong> - ○○○○대학교 컴퓨터공학과<br/> 
             </div>
         </div>
+        <br/><hr size = "3px"/><br/>
+            <h3>※ About 페이지란?</h3> <br/>
+            <div class = "introduction">
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <img src="../hydn_logo.png" width="180" height="70" alt="로고">
+                &nbsp;&nbsp;<h4>의 About Page입니다.</h4>
+            </div>
         <br/><hr size = "3px"/><br/>
         <div class = "page_body">
             <h3>※ NavBar 기능과 사용</h3>
