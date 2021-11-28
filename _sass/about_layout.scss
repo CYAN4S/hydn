@@ -4,6 +4,9 @@
   align-content: flex-start;
   background: #defaff;
   border: 1px solid #000000;
+  display : flex;
+  color: crimson;
+  font-size: larger;
 }
 
 .information {
@@ -14,7 +17,7 @@
   display: block;
 }
 
-.nav {
+.nav{
   font-family: "Arial Narrow";
   font-size: 30pt;
 }
