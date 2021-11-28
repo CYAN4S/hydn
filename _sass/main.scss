@@ -1,20 +1,19 @@
-.black-nav{
+.black-nav {
   background: black;
-  width : 30%;
-  display : flex;
-  color : white;
-  padding : 10px;
+  width: 30%;
+  display: flex;
+  color: white;
+  padding: 10px;
   font-weight: bold;
-
 }
 
 .editior {
   align-items: center;
-  border : 2px solid gray;
-  margin-top : 10px;
+  border: 2px solid gray;
+  margin-top: 10px;
   border-radius: 5px;
   background: white;
-  width : 20%;
+  width: 20%;
 }
 
 li {
@@ -24,16 +23,19 @@ li {
 a {
   text-decoration: none;
 }
+
 .postlist {
   border-bottom: 3px solid #efefef;
   margin-left: 150px;
 }
-.postlist a{
-  font-family: 'Segoe UI';
+
+.postlist a {
+  font-family: "Segoe UI";
   font-size: 18px;
 }
-.postlist p{
+
+.postlist p {
   color: rgb(80, 79, 79);
-  font-size:15px ;
+  font-size: 15px;
   margin-left: 50px;
 }

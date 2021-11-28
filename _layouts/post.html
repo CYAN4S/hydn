@@ -4,7 +4,7 @@ current: post
 ---
 
 {% assign author = site.authors | where: 'short_name', page.author | first %}
-<main>
+
   <p>{{ page.date | date:'%e %B %Y' }}</p>
   <p>
     Written by
@@ -45,4 +45,3 @@ current: post
     <p>다음 글이 없습니다.</p>
     {% endif %}
   </div>
-</main>
