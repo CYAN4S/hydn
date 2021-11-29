@@ -1,17 +1,13 @@
-
-<head> 
-    <meta charset = 'utf-8'/>
-    <link rel = "stylesheet" href="../css/style.css">
-</head>
 <nav>
-    <ul class="nav" role="menu">
-        <li class="nav-home" role="menuitem"><a href="{{ '/' | relative_url }}">Home</a></li>
-        <li class="nav-about" role="menuitem"><a href="{{ '/about' | relative_url }}">About</a></li>
-        <li class="nav-AllPost" role="menuitem"><a href="{{ '/allpost' | relative_url }}">All Post</a></li>
-        <li class="nav-TagPost" role="menuitem"><a href="{{ '/tagpost' | relative_url }}">Tag 별 Post</a></li>
-        <li class="nav-TagPost" role="menuitem"><a href="{{ '/categorypost' | relative_url }}">Category 별 Post</a></li>
-        {% for category in site.category-pages %}
-        <li><a href="{{ category.url }}">{{ category.title }}</a></li>
-        {% endfor %}
-    </ul>
+  <ul>
+    <li><a href="{{ '/' | relative_url }}">HOME</a></li>
+    <li><a href="{{ '/about' | relative_url }}">ABOUT</a></li>
+    <li><a href="{{ '/allpost' | relative_url }}">POSTS</a></li>
+    <li><a href="{{ '/tagpost' | relative_url }}">TAGS</a></li>
+    <li><a href="{{ '/categorypost' | relative_url }}">CATEGORIES</a></li>
+
+    {% for category in site.category-pages %}
+    <li><a href="{{ category.url }}">{{ category.title | upcase }}</a></li>
+    {% endfor %}
+  </ul>
 </nav>

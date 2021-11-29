@@ -1,7 +1,56 @@
-* {
-    margin: 0;
-}
+// You can import web fonts at here.
+// If you want to use HTML to import web fonts, go to _layouts/default.
 
+// Import SASS files at here.
 @import "./layout.scss";
 @import "./typo.scss";
 @import "./code.scss";
+@import "./nav.scss";
+@import "./about_layout.scss";
+@import "./tagpost.scss";
+
+* {
+  margin: 0;
+  font-family: "Pretendard";
+}
+
+li {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: gray;
+}
+
+.black-nav {
+  background: black;
+  width: 30%;
+  display: flex;
+  color: white;
+  padding: 10px;
+  font-weight: bold;
+}
+
+.editior {
+  align-items: center;
+  border: 2px solid gray;
+  margin-top: 10px;
+  border-radius: 5px;
+  background: white;
+  width: 20%;
+}
+
+.postlist {
+  border-bottom: 3px solid #efefef;
+}
+
+.postlist a {
+  font-family: "Segoe UI";
+  font-size: 18px;
+}
+
+.postlist p {
+  color: rgb(80, 79, 79);
+  font-size: 15px;
+}

@@ -5,34 +5,36 @@ current: post
 
 {% assign author = site.authors | where: 'short_name', page.author | first %}
 
-  <p>{{ page.date | date:'%e %B %Y' }}</p>
-  <p>
-    Written by
-    {% if author %} 
-    <a href="{{ author.url }}">{{ author.name }}</a>
-    {% elsif page.author %} 
-    {{ page.author }} 
-    {% else %} 
-    Anonymous 
-    {% endif %}
-  </p>
-
-  <h1>{{ page.title }}</h1>
-
-  {% if page.cover %}
-  <img
-    src="{{ page.cover | relative_url }}"
-    alt="Title image of {{ page.title }}"
-  />
-  {% endif %}
+<section>
+  <article>
+    <p>{{ page.date | date:'%e %B %Y' }}</p>
+    <p>
+      Written by {% if author %}
+      <a href="{{ author.url }}">{{ author.name }}</a>
+      {% elsif page.author %} {{ page.author }} {% else %} Anonymous {% endif %}
+    </p>
   
-  {{ content }}
+    <h1>{{ page.title }}</h1>
+  
+    {% if page.cover %}
+    <img
+      src="{{ page.cover | relative_url }}"
+      alt="Title image of {{ page.title }}"
+    />
+    {% endif %} {{ content }}
+  </article>
+</section>
 
+<section>
   <div class="neighbor">
     <p>이전 글</p>
 
     {% if page.previous %}
-    <p><a href="{{ page.previous.url | relative_url }}">{{page.previous.title}}</a></p>
+    <p>
+      <a href="{{ page.previous.url | relative_url }}">
+        {{page.previous.title}}
+      </a>
+    </p>
     {% else %}
     <p>이전 글이 없습니다.</p>
     {% endif %}
@@ -45,3 +47,4 @@ current: post
     <p>다음 글이 없습니다.</p>
     {% endif %}
   </div>
+</section>

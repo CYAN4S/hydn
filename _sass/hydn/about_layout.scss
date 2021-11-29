@@ -13,19 +13,6 @@
   display: flex;
 }
 
-.nav_bar {
-  display: block;
-}
-
-.nav{
-  font-family: "Arial Narrow";
-  font-size: 30pt;
-}
-
-p {
-  font-family: "나눔고딕 ExtraBold";
-  font-size: small;
-}
 .editior {
   text-align: start;
   border: 2px solid gray;
@@ -39,25 +26,6 @@ p {
   align-items: start;
   margin-top: 10px;
   display: flex;
-}
-
-h1 {
-  border: 3px solid #4fb1ff;
-  border-radius: 5px;
-  text-align: center;
-  background-color: black;
-  color: white;
-  width: 20%;
-  height: 100px;
-}
-
-h2 {
-  align-self: center;
-  padding: 30px;
-  margin: 30px 20px 30px 0px;
-  text-align: center;
-  color: darkblue;
-  border-radius: 25px;
 }
 
 strong {

@@ -38,3 +38,104 @@ ul {
   font-weight: 400;
   line-height: 1.7;
 }
+
+article {
+  margin: 0 auto;
+  padding: 80px 0 40px;
+  > * {
+    padding: 0 $gap;
+  }
+
+  div[class*="language"] {
+    padding: 0;
+    margin: 20px 0;
+    pre {
+      padding: $gap;
+      line-height: 1.5;
+      border-radius: $gap;
+      overflow: auto;
+      code {
+        color: white;
+      }
+    }
+  }
+
+  a,
+  a > code {
+    color: darkgray;
+  }
+
+  img {
+    max-width: 100%;
+  }
+
+  blockquote {
+    background-color: lightgray;
+    margin: 24px 0;
+    padding: 20px;
+    border-radius: 20px;
+    p {
+      margin: 0;
+      color: black;
+    }
+  }
+
+  h1 {
+    letter-spacing: -1.5px;
+  }
+
+  h2 {
+    margin: 72px 0 30px;
+  }
+
+  h3 {
+    margin: 56px 0 24px;
+  }
+
+  h4 {
+    margin: 52px 0 20px;
+  }
+
+  h5 {
+    margin: 48px 0 16px;
+  }
+
+  h6 {
+    margin: 36px 0 16px;
+  }
+
+  p,
+  ol,
+  ul {
+    margin: 0 0 20px;
+  }
+
+  ol,
+  ul {
+    margin: 24px 20px;
+  }
+
+  li {
+    margin: 8px 0;
+  }
+
+  li::marker {
+    font-weight: 700;
+  }
+
+  ol > li {
+    list-style-type: numeric;
+  }
+
+  ul > li {
+    list-style-type: disc;
+  }
+
+  ul ul,
+  ul ol,
+  ol ul,
+  ol ol {
+    margin: 8px 0 8px 32px;
+    padding: 0;
+  }
+}
