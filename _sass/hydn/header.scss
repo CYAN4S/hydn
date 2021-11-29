@@ -1,0 +1,48 @@
+header {
+  display: flex;
+  background-color: #333;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+
+  .title {
+    font: 400 24px "Outfit";
+    color: white;
+  }
+}
+
+nav.in-header {
+  height: 100%;
+  
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+  }
+
+  ul:after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+
+  li {
+    height: 100%;
+    float: left;
+
+    a {
+      @extend %flex-center;
+      color: white;
+      height: 100%;
+      padding: 0 12px;
+      text-decoration: none;
+      font-family: "Outfit";
+      font-weight: 700;
+    }
+
+    a:hover:not(.active) {
+      background-color: #111;
+    }
+  }
+}
