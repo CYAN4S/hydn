@@ -1,7 +1,12 @@
+{% assign authors = site.authors | where: 'short_name', post.author %}
+
 <li>
   <div class="postlist">
     <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
     <p>{{ post.excerpt }}</p>
     <p>{{ post.date | date: "%Y/%m/%d" }}</p>
+    {% for author in authors %}
+    <p>{{ author.name }}</p>
+    {% endfor %}
   </div>
 </li>

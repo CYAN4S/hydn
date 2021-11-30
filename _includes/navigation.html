@@ -5,6 +5,7 @@
     <li><a href="{{ '/allpost' | relative_url }}">POSTS</a></li>
     <li><a href="{{ '/tagpost' | relative_url }}">TAGS</a></li>
     <li><a href="{{ '/categorypost' | relative_url }}">CATEGORIES</a></li>
+    <li><a href="{{ '/seriespost' | relative_url }}">SERIES</a></li>
 
     {% for category in site.category-pages %}
     <li><a href="{{ category.url }}">{{ category.title | upcase }}</a></li>

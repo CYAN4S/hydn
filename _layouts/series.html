@@ -1,0 +1,25 @@
+---
+layout: default
+---
+
+<section>
+  <h2>{{ page.title | upcase }} 시리즈</h2>
+
+  {{ content }}
+
+  <h3>포스트 목록</h3>
+
+  <ul>
+    {% for post in site.posts %} 
+    {% if post.series contains page.title or post.series == page.title %}
+    <li>
+      <div>
+        <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+        <p>{{ post.excerpt }}</p>
+        <p>{{ post.date | date: "%Y/%m/%d" }}</p>
+      </div>
+    </li>
+    {% endif %} 
+    {% endfor %}
+  </ul>
+</section>
