@@ -3,8 +3,9 @@ layout: default
 ---
 <h1>{{ site.title }}</h1>
 
-{% include navigation.html %}
+<img src="https://t1.daumcdn.net/cfile/tistory/193EB8404DC4FE6613" width=100%  height =300px alt="배경 사진" />
 
-<img src="https://t1.daumcdn.net/cfile/tistory/193EB8404DC4FE6613" width="700" alt="배경 사진" />
-
-{% for post in site.posts %} {% include postlist-item.html %} {% endfor %}
+<section>
+  {% for post in site.posts %} {% include postlist-item.html %} {% endfor %}
+</section>
+{% include search.html %}

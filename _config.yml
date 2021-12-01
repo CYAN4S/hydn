@@ -1,5 +1,5 @@
 title: Hydn
-email:
+email: example@example.com
 description: >-
   Hydn 기술 블로그
 baseurl: ""
@@ -15,10 +15,19 @@ logo:
 lang: ko_KR
 
 # Disqus
-disqus: False
-disqus_shortname: xxxxxxxx
+disqus: True
+disqus_shortname: "hydn"
 # disqus는 온라인 댓글 시스템. 댓글 기능을 사용하기 위해 disqus를 이용할 것인지 여부와 만약 사용하면
 # disqus shortname을 입력 ( disqus username이 아님 )
+
+tipue_search:
+     include:
+         pages: false
+         collections: []
+     exclude:
+         files: [search.html, index.html, tagpost.html]
+         categories: []
+         tags: []
 
 social:
   name: Hydn
@@ -31,22 +40,40 @@ navigation: True
 subscribers: True
 # subscriber 기능을 사용할건지의 여부
 
-#defaults:
-#  - scope:
-#      path: ""
-#      type: "posts"
-#    values:
-#      layout: "post"
-#  - scope:
-#      path: ""
-#    values:
-#      layout: "default"
-#      image: "/assets/img/default/thumbnail.png"
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+  - scope:
+      path: ""
+      type: "category-pages"
+    values:
+      layout: "category-page"
+      permalink: /category/:title
+  - scope:
+      path: ""
+      type: "authors"
+    values:
+      layout: "author"
+      permalink: /author/:title
+      image: assets/img/default-profile.png
 
 plugins:
   - jekyll-seo-tag
 
-theme: hydn
+theme: Hydn
+
+sass:
+  sass_dir: _sass/hydn
 
 collections:
   authors:
+    output: true
+  category-pages:
+    output: true
+    permalink : /:collection/:name
+
+sass:
+  style : compressed

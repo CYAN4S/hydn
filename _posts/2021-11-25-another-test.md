@@ -1,6 +1,6 @@
 ---
-title: "타이포 테스트 2"
-categories: [story]
+title: "카테고리 테스트"
+category: test
 tags: [travel]
 author: david
 ---

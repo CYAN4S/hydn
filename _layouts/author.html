@@ -1,0 +1,21 @@
+---
+layout: default
+---
+
+<img
+  src="{{ page.image | relative_url }}"
+  alt="{{ page.name }}'s profile image"
+/>
+
+<h2>{{ page.name }}</h2>
+<p>{{ page.short_name }}</p>
+<p>{{ page.position }}</p>
+
+{{ content }}
+
+<h3>작성한 글</h3>
+
+{% assign filtered_posts = site.posts | where: 'author', page.short_name %}
+<ul>
+  {% for post in filtered_posts %} {% include postlist-item.html %} {% endfor %}
+</ul>

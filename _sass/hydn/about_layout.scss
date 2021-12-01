@@ -1,0 +1,47 @@
+.introduction {
+  display: flex;
+  justify-content: space-around;
+  align-content: flex-start;
+  background: #defaff;
+  border: 1px solid #000000;
+  display : flex;
+  color: crimson;
+  font-size: larger;
+}
+
+.information {
+  display: flex;
+}
+
+.editior {
+  text-align: start;
+  border: 2px solid gray;
+  margin: 10px 10px 30px 5px;
+  border-radius: 10px;
+  background: white;
+  width: 35%;
+}
+
+.page_body {
+  align-items: start;
+  margin-top: 10px;
+  display: flex;
+}
+
+strong {
+  display: flex;
+  font-size: 16px;
+  color: darkblue;
+  margin: 10px 10px 10px 10px;
+}
+
+#item {
+  width: 50%;
+  margin: 0 auto;
+}
+
+img {
+  display: flex;
+  align-items: baseline;
+  align-content: center;
+}

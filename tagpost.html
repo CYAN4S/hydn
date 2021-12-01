@@ -1,16 +1,23 @@
 ---
 layout: default
-title: "Tags"
 ---
 
+<img src="https://t1.daumcdn.net/cfile/tistory/193EB8404DC4FE6613" width=100%  height=300px alt="배경 사진" />
 
-{% for tag in site.tags %}
-<h2>{{ tag[0]}} </h2>
-<ul>
+{% assign tags = site.tags | sort %}
+
+<section>
+    {% for tag in tags %}
+    <div class = "tagbox">
+    <div class="tag">
+    <h2>{{ tag[0]}} </h2></div>
+    <ul>
     {% for post in tag[1] %}
     <li>
-        <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+    <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
     </li>
     {% endfor %}
-</ul>
-{% endfor %}
+    </div>
+    </ul>
+    {% endfor %}
+</section>
