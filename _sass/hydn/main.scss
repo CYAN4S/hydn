@@ -1,14 +1,6 @@
 // You can import web fonts at here.
 // If you want to use HTML to import web fonts, go to _layouts/default.
 
-// Import SASS files at here.
-@import "./layout.scss";
-@import "./typo.scss";
-@import "./code.scss";
-@import "./nav.scss";
-@import "./about_layout.scss";
-@import "./tagpost.scss";
-
 * {
   margin: 0;
   font-family: "Pretendard";
@@ -54,3 +46,17 @@ a {
   color: rgb(80, 79, 79);
   font-size: 15px;
 }
+
+%flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+// Import SASS files at here.
+@import "./layout.scss";
+@import "./typo.scss";
+@import "./code.scss";
+@import "./about_layout.scss";
+@import "./tagpost.scss";
+@import "./header.scss";

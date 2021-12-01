@@ -1,8 +1,9 @@
 ---
 title: "카테고리 테스트"
 category: test
-tags: [travel]
+tags: [travel, conference]
 author: david
+series: [travel-2021]
 ---
 
 이것은 David가 작성한 예시 블로그 포스트입니다.

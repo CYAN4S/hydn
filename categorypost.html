@@ -5,7 +5,14 @@ title: "Categories"
 
 <section>
   {% for category in site.categories %}
+
+  {% assign category-page = site.category-pages | where: "title", category[0] | first %}
+  {% if category-page %}
+  <a href="{{ category-page.url }}"><h2>{{ category[0] }}</h2></a>
+  {% else %}
   <h2>{{ category[0] }}</h2>
+  {% endif %}
+
   <ul>
     {% for post in category[1] %}
     <li><a href="{{ post.url }}">{{ post.title }}</a></li>

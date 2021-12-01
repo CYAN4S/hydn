@@ -1,11 +1,24 @@
 ---
 layout: default
 ---
+
 <h1>{{ site.title }}</h1>
 
-<img src="https://t1.daumcdn.net/cfile/tistory/193EB8404DC4FE6613" width=100%  height =300px alt="배경 사진" />
+<img
+  src="https://t1.daumcdn.net/cfile/tistory/193EB8404DC4FE6613"
+  width="100%"
+  height="300px"
+  alt="배경 사진"
+/>
 
 <section>
+  <h2>추천 게시물</h2>
+  {% for post in site.posts %} 
+  {% if post.featured %} 
+  {% include postlist-item.html %} 
+  {% endif %} 
+  {% endfor %}
+  <h2>모든 포스트</h2>
   {% for post in site.posts %} {% include postlist-item.html %} {% endfor %}
 </section>
 {% include search.html %}

@@ -59,6 +59,12 @@ defaults:
       layout: "author"
       permalink: /author/:title
       image: assets/img/default-profile.png
+  - scope:
+      path: ""
+      type: "series"
+    values:
+      layout: "series"
+      permalink: /series/:title
 
 plugins:
   - jekyll-seo-tag
@@ -74,6 +80,8 @@ collections:
   category-pages:
     output: true
     permalink : /:collection/:name
+  series:
+    output: true
 
 sass:
   style : compressed
