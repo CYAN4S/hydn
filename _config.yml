@@ -85,3 +85,6 @@ collections:
 
 sass:
   style : compressed
+
+paginate: 2
+paginate_path: "/allpost/:num/"

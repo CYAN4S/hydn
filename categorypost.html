@@ -8,9 +8,9 @@ title: "Categories"
 
   {% assign category-page = site.category-pages | where: "title", category[0] | first %}
   {% if category-page %}
-  <a href="{{ category-page.url }}"><h2>{{ category[0] }}</h2></a>
+  <a href="{{ category-page.url }}"><h2>{{ category[0] | upcase }}</h2></a>
   {% else %}
-  <h2>{{ category[0] }}</h2>
+  <h2>{{ category[0] | upcase }}</h2>
   {% endif %}
 
   <ul>
