@@ -54,3 +54,18 @@ hr {
   margin : 20px 0px 30px 0px;
   border-width: 2px;
 }
+
+.maintext{
+  line-height: 200%;
+}
+
+a[href = "https://developers.google.com/search/docs/advanced/robots/create-robots-txt?hl=ko&ref_topic=6061961&visit_id=637740100065122931-238226223&rd=1"],
+a[href = "https://developers.google.com/search#?modal_active=none"]
+{
+  color : #737373;
+}
+
+a:hover{
+  color : white;
+  background-color: black;
+}
