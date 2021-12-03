@@ -29,6 +29,7 @@ navigation: true
     <h4> <br /> 의 도움말 페이지입니다.</h4>
   </div>
   <hr />
+
   <div class="about_page_body">
     <h3>※ 블로그 관리자 정보</h3>
     &nbsp; &nbsp;
@@ -249,4 +250,62 @@ navigation: true
     />
   </div>
   <hr />
+  <div class="about_page_body">
+    <h3>※ Google Search Console 활용하기 </h3>
+  </div>
+  <div>
+    <img
+            src="{{ 'assets/img/hydn//about_search_console.png' | relative_url }}"
+            width="60%"
+            height="60%"
+            alt="시리즈"
+    />
+    <strong
+    > - Google Search Console은 검색엔진 Google에 본인의 사이트를 등록해 더 많은 방문자를 유입되게 하는 기능입니다.
+    </strong>
+    <br />
+
+    <div class = "maintext">
+      <p> 해당 과정으로, 보유한 Page를 Google 검색엔진에 노출시켜 작성한 글이 다른 사람에게 쉽게 노출되도록 처리할 수 있습니다. 이 작업을 하지 않으면 작성된 글이 웹에 노출될 확률이 현저하게 떨어집니다. </p>
+      <br />
+      <p> Google이 제공하는 Google Search Console을 이용하여 내 GitHub Page의 Domain을 등록시키고 sitemap.xml을 생성해 Google Search Console에 제출하면 됩니다.
+        sitemap.xml을 등록해 두면 Google 검색 크롤러가 주기적으로 페이지를 크롤링하여 indexing하게 됩니다. </p>
+
+      <br />
+      <h5> 1. 먼저 현재 블로그 root밑에 robots.txt가 존재할 수 있도록 파일을 생성합니다. (plugin : jekyll-sitemap 사용 시 자동생성됩니다.)</h5>
+      <p> &nbsp;&nbsp; - 관련 링크는 오른쪽을 참조해주세요. >>>
+        <b> <a href = "https://developers.google.com/search/docs/advanced/robots/create-robots-txt?hl=ko&ref_topic=6061961&visit_id=637740100065122931-238226223&rd=1"> robots.txt 알아보기 </a> </b>
+      </p>
+
+      <br />
+      <h5> 2. 그런다음 sitemap.xml을 작성해야 합니다. sitemap.xml 역시 root밑에 존재해야 하며 추후에 Google Search Console에 제출해야 합니다.
+        (마찬가지로 <a href = "http://jnwhome.iptime.org/redmine/projects/open-board/wiki/%ED%94%8C%EB%9F%AC%EA%B7%B8%EC%9D%B8%EC%9D%84_%EC%82%AC%EC%9A%A9%ED%95%9C_Jerkyll_Sitemap_%EB%A7%8C%EB%93%A4%EA%B8%B0"> plugin : jekyll-sitemap  </a>사용 시 자동생성됩니다.)</h5>
+
+      <br />
+      <h5> 3. sitemap.xml 작성이 끝났으면 이제
+        <a href = "https://developers.google.com/search#?modal_active=none"> Google Search Console </a>
+        에 접속합니다.</h5>
+      <p> &nbsp;&nbsp; - 아래 속성 유형 단계에서 자신의 page URL을 입력할 수 있습니다. </p>
+      <br />
+      <img
+              src="{{ 'assets/img/hydn//about_search_console.screen_01.png' | relative_url }}"
+              width="60%"
+              height="60%"
+              alt="시리즈"
+      />
+
+      <h5> 4. 개요 및 실적 확인하기</h5>
+      <p> &nbsp;&nbsp; - URL 등록 성공 시, 해당 시점을 기준으로 여러 통계치를 확인할 수 있는 화면으로 넘어갑니다.</p>
+      <p> &nbsp;&nbsp; - 이곳에서 자신의 <b>블로그 접근성, 실적, 노출, 클릭, CTR </b> 등을 확인할 수 있습니다..</p>
+      <br />
+      <img
+              src="{{ 'assets/img/hydn//about_search_console.screen_02.png' | relative_url }}"
+              width="100%"
+              height="100%"
+              alt="시리즈"
+      />
+     </div>
+
+
+  </div>
 </section>
