@@ -5,29 +5,30 @@ current: post
 
 {% assign author = site.authors | where: 'short_name', page.author | first %}
 
-<section>
-  <article>
-    <p>{{ page.date | date:'%e %B %Y' }}</p>
-    <p>
-      Written by {% if author %}
-      <a href="{{ author.url }}">{{ author.name }}</a>
-      {% elsif page.author %} {{ page.author }} {% else %} Anonymous {% endif %}
-    </p>
-  
-    <h1>{{ page.title }}</h1>
-  
-    {% if page.cover %}
-    <img
-      src="{{ page.cover | relative_url }}"
-      alt="Title image of {{ page.title }}"
-    />
-    {% endif %} {{ content }}
-  </article>
-</section>
+{% if page.cover %}
+<img
+  src="{{ page.cover | relative_url }}"
+  alt="Title image of {{ page.title }}"
+  class="post-head-image"
+/>
+{% endif %}
+
+<article>
+
+  <h1>{{ page.title }}</h1>
+
+  <p class="meta">{{ page.date | date: site.date_format }} / 
+    Written by {% if author %}
+    <a href="{{ author.url }}">{{ author.name }}</a>
+    {% elsif page.author %} {{ page.author }} {% else %} Anonymous {% endif %}
+  </p>
+
+ {{ content }}
+</article>
 
 <section>
   <div class="neighbor">
-    <p>이전 글</p>
+    <p class="meta">이전 글</p>
 
     {% if page.previous %}
     <p>
@@ -39,14 +40,22 @@ current: post
     <p>이전 글이 없습니다.</p>
     {% endif %}
 
-    <p>다음 글</p>
+    <p class="meta">다음 글</p>
 
     {% if page.next %}
-    <p><a href="{{ page.next.url | relative_url }}">{{page.next.title}}</a></p>
+    <p>
+      <a href="{{ page.next.url | relative_url }}"> {{page.next.title}} </a>
+    </p>
     {% else %}
     <p>다음 글이 없습니다.</p>
     {% endif %}
   </div>
 </section>
-<script id="dsq-count-scr" src="//hydn-blog-1.disqus.com/count.js" async></script>
-{% include comment.html %}
+<section>
+  <script
+    id="dsq-count-scr"
+    src="//hydn-blog-1.disqus.com/count.js"
+    async
+  ></script>
+  {% include comment.html %}
+</section>

@@ -14,7 +14,7 @@ layout: default
 
   {% assign series-page = site.series | where: "title", series.title | first %}
   {% if series-page %}
-  <a href="{{ series-page.url }}"><h2>{{ series.title }}</h2></a>
+  <h2><a href="{{ series-page.url }}">{{ series.title }}</a></h2>
   {% else %}
   <h2>{{ series.title }}</h2>
   {% endif %}
@@ -27,7 +27,5 @@ layout: default
     {% endfor %}
   </ul>
   {% endfor %}
-
-
 
 </section>

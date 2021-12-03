@@ -1,9 +1,21 @@
 // You can import web fonts at here.
 // If you want to use HTML to import web fonts, go to _layouts/default.
 
+$font-sans: "Pretendard", sans-serif;
+$font-serif: "", serif;
+$font-display: "Outfit", $font-sans;
+$font-mono: "Roboto Mono", "JetBrains Mono", "Consolas", monospace;
+
+$color-primary: #000000;
+$color-link: gray;
+
+
 * {
   margin: 0;
-  font-family: "Pretendard";
+}
+
+body {
+  font-family: $font-sans;
 }
 
 li {
@@ -12,34 +24,38 @@ li {
 
 a {
   text-decoration: none;
-  color: gray;
+  color: $color-link;
 }
 
-.black-nav {
-  background: black;
-  width: 30%;
-  display: flex;
-  color: white;
-  padding: 10px;
-  font-weight: bold;
+code, pre {
+  font-family: $font-mono;
 }
 
-.editior {
-  align-items: center;
-  border: 2px solid gray;
-  margin-top: 10px;
-  border-radius: 5px;
-  background: white;
-  width: 20%;
-}
+// .black-nav {
+//   background: black;
+//   width: 30%;
+//   display: flex;
+//   color: white;
+//   padding: 10px;
+//   font-weight: bold;
+// }
+
+// .editior {
+//   align-items: center;
+//   border: 2px solid gray;
+//   margin-top: 10px;
+//   border-radius: 5px;
+//   background: white;
+//   width: 20%;
+// }
 
 .postlist {
-  border-bottom: 3px solid #efefef;
+  border-bottom: 1px solid #efefef;
 }
 
 .postlist a {
-  font-family: "Segoe UI";
-  font-size: 18px;
+  // font-family: "Segoe UI";
+  // font-size: 18px;
 }
 
 .postlist p {
@@ -60,3 +76,4 @@ a {
 @import "./about_layout.scss";
 @import "./tagpost.scss";
 @import "./header.scss";
+@import "./footer.scss";

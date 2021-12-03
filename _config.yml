@@ -88,3 +88,5 @@ sass:
 
 paginate: 2
 paginate_path: "/allpost/:num/"
+
+date_format: '%e %B %Y'
