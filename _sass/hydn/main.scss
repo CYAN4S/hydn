@@ -68,7 +68,10 @@ code, pre {
   justify-content: center;
   align-items: center;
 }
-
+.backgroundimg{
+  display: block;
+  margin: auto;
+}
 // Import SASS files at here.
 @import "./layout.scss";
 @import "./typo.scss";
