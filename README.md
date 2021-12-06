@@ -155,6 +155,25 @@ Comments are enabled by default and will only appear in production, i.e., `JEKYL
 
 If you don't want to display comments for a particular post you can disable them by deleting`{% include comment.html %}` to that post.html's bottom.
 
+### Enabling Searchbox (via tipuesearch)
+
+Optionally, you can search your post via search box.
+
+To enable it, add the following lines to your Jekyll site:
+
+```yaml
+tipue_search:
+     include:
+         pages: false
+         collections: []
+     exclude:
+         files: [search.html, index.html, tagpost.html]
+         categories: []
+         tags: []
+```
+In this code, `pages: false` means that you don't want to search genera html pages for focusig post's search. 
+And via `exclude`, you can choose file, categories and tags that you don't want to show when you search. 
+
 
 ### Post Author
 
