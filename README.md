@@ -94,6 +94,92 @@ Refers to various asset files within the `assets` directory.
 
 
 
+
+
+
+
+
+## Usage
+
+Have the following line in your config file:
+
+```yaml
+theme: hydn
+```
+
+
+### Customizing templates
+
+To override the default structure and style of hydn, simply create the concerned directory at the root of your site, copy the file you wish to customize to that directory, and then edit the file.
+
+The site's default CSS has now moved to a new place within the gem itself, [`assets/css/style.scss`](assets/css/style.scss).
+
+-------------------------CSS 바꾸는 방법 -----------------
+In hydn, if you only need to customize the colors of the theme, refer to the subsequent section on skins. To have your
+*CSS overrides* in sync with upstream changes released in future versions, you can collect all your overrides for the Sass
+variables and mixins inside a sass file placed at `_sass/minima/custom-variables.scss` and all other overrides inside a sass file
+placed at path `_sass/`.
+-------------------------CSS 바꾸는 방법 -----------------
+
+You need not maintain entire partial(s) at the site's source just to override a few styles. However, your stylesheet's primary
+source (`assets/css/style.scss`) should contain the following:
+
+  - Front matter dashes at the very beginning (can be empty).
+  - Directive to import a skin.
+  - Directive to import the base styles (automatically loads overrides when available).
+
+Therefore, your `assets/css/style.scss` should contain the following at minimum:
+
+```sass
+---
+---
+
+@import "hydn/main";
+```
+
+
+### Enabling comments (via Disqus)
+
+Optionally, if you have a Disqus account, you can tell Jekyll to use it to show a comments section below each post.
+
+To enable it, add the following lines to your Jekyll site:
+
+```yaml
+disqus: True
+disqus_shortname: "hydn"
+```
+
+You can find out more about Disqus' shortnames [here](https://help.disqus.com/installation/whats-a-shortname).
+
+Comments are enabled by default and will only appear in production, i.e., `JEKYLL_ENV=production`
+
+If you don't want to display comments for a particular post you can disable them by deleting`{% include comment.html %}` to that post.html's bottom.
+
+
+### Post Author
+
+From `hydn`, `page.author` is expected to be a mapping of attributes from _authors directory. 
+If you want to add more registered author, you can add `authorname.html` files in _author directory.  If you add author, you can get author's personal introduce page. Otherwise, you can just display author's name in your post. 
+
+Here is example.
+```yaml
+authors: [ann, Song Kim]
+```
+In this code, ann is the registered author, but Song Kim is not. So when you make is post, only ann has her own introduce page.
+
+
+### Enabling Google Analytics 구글 크롤링 할 수 있도록 하는 법
+
+To enable Google Analytics, add the following lines to your Jekyll site:
+
+```yaml
+  google_analytics: UA-NNNNNNNN-N
+```
+
+Google Analytics will only appear in production, i.e., `JEKYLL_ENV=production`
+
+
+
 ## Contributing
 
 Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/hello. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
