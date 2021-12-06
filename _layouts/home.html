@@ -1,0 +1,20 @@
+---
+layout: default
+---
+
+<img
+  class="post-head-image"
+  src="{{ page.cover }}"
+  height="300px"
+  alt="배경 사진"
+/>
+
+<section>
+  <!-- <h1>{{ site.title }}</h1> -->
+  <h2>추천 포스트</h2>
+  {% for post in site.posts %} {% if post.featured %} {% include
+  postlist-item.html %} {% endif %} {% endfor %}
+  <h2>최신 포스트</h2>
+  {% for post in site.posts %} {% include postlist-item.html %} {% endfor %} {%
+  include search.html %}
+</section>

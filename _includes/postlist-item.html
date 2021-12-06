@@ -1,12 +1,33 @@
 {% assign authors = site.authors | where: 'short_name', post.author %}
 
 <li>
-  <div class="postlist">
+  <div class="postlist {{ include.class }}">
     <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
-    <p>{{ post.excerpt }}</p>
-    <p>{{ post.date | date: "%Y/%m/%d" }}</p>
-    {% for author in authors %}
-    <p>{{ author.name }}</p>
+    <p class="postlist-excerpt">{{ post.excerpt }}</p>
+    <p class="postlist-date">{{ post.date | date: "%Y/%m/%d" }}</p>
+    <p class="postlist-author">
+    {% if post.authors %}
+    {% for author in post.authors %}
+    {% assign x = site.authors | where: "short_name", author | first %}
+    {% if x %}
+    {{ x.name }}
+    {% else %}
+    {{ author }}
+    {% endif %}    
     {% endfor %}
+
+    {% elsif post.author %}
+    {% assign x = site.authors | where: "short_name", post.author | first %}
+    {% if x %}
+    {{ x.name }}
+    {% else %}
+    {{ post.author }}
+    {% endif %}
+
+    {% else %}
+    Anonymous
+
+    {% endif %}
+    </p>
   </div>
 </li>

@@ -1,19 +1,23 @@
 header {
-  display: flex;
   background-color: #333;
-  justify-content: space-between;
-  align-items: center;
   height: 60px;
 
   .title {
     font: 400 24px "Outfit";
     color: white;
   }
+
+  section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+  }
 }
 
 nav.in-header {
   height: 100%;
-  
+
   ul {
     list-style-type: none;
     margin: 0;
