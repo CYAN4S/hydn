@@ -187,16 +187,9 @@ authors: [ann, Song Kim]
 In this code, ann is the registered author, but Song Kim is not. So when you make is post, only ann has her own introduce page.
 
 
-### Enabling Google Analytics 구글 크롤링 할 수 있도록 하는 법
+### Enabling Google Analytics 
 
-To enable Google Analytics, add the following lines to your Jekyll site:
-
-```yaml
-  google_analytics: UA-NNNNNNNN-N
-```
-
-Google Analytics will only appear in production, i.e., `JEKYLL_ENV=production`
-
+You can get how to enabling google analytics in blog's about page. 
 
 
 ## Contributing
