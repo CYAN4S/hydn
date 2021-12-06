@@ -203,8 +203,9 @@ navigation: true
   </div>
   <div>
     <strong
-    > - 특정 포스트를 검색하기 위하여 사용합니다.
+    > - 특정 포스트를 검색하기 위하여 사용합니다. 해당 텍스트 아래의 검색상자에서 검색해보세요!
     </strong>
+    {% include search.html %}
     <br />
     <img
             src="{{ 'assets/img/hydn//about_search_screen.png' | relative_url }}"
@@ -319,7 +320,4 @@ navigation: true
       />
      </div>
   </div>
-
-  <br />
-  {% include search.html %}
 </section>
