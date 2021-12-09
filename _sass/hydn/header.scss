@@ -1,10 +1,13 @@
+$main-background-color:#333;
+$font-color:white;
+
 header {
-  background-color: #333;
+  background-color: $main-background-color;
   height: 60px;
 
   .title {
     font: 400 24px "Outfit";
-    color: white;
+    color: $font-color;
   }
 
   section {
@@ -37,7 +40,7 @@ nav.in-header {
 
     a {
       @extend %flex-center;
-      color: white;
+      color: $font-color;
       height: 100%;
       padding: 0 12px;
       text-decoration: none;
