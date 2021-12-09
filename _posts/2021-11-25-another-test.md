@@ -2,7 +2,6 @@
 title: "카테고리 테스트"
 category: test
 tags: [travel, conference]
-author: david
 series: [travel-2021]
 ---
 
