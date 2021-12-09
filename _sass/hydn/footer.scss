@@ -1,6 +1,7 @@
 $main-background-color:#444;
 $font-color:white;
 footer {
+    background-color: $main-background-color;
     height: 100px;
     color: $font-color;
 }
