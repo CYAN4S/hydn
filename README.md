@@ -103,21 +103,21 @@ To override the default structure and style of hydn, simply create the concerned
 
 The site's default CSS has now moved to a new place within the gem itself, [`assets/css/style.scss`](assets/css/style.scss).
 
--------------------------CSS 바꾸는 방법 -----------------
-In hydn, if you only need to customize the colors of the theme, refer to the subsequent section on skins. To have your
-*CSS overrides* in sync with upstream changes released in future versions, you can collect all your overrides for the Sass
-variables and mixins inside a sass file placed at `_sass/minima/custom-variables.scss` and all other overrides inside a sass file
-placed at path `_sass/`.
--------------------------CSS 바꾸는 방법 -----------------
 
-You need not maintain entire partial(s) at the site's source just to override a few styles. However, your stylesheet's primary
-source (`assets/css/style.scss`) should contain the following:
+In hydn, if you only need to customize the colors of the theme, please follow the method below.
 
-  - Front matter dashes at the very beginning (can be empty).
-  - Directive to import a skin.
-  - Directive to import the base styles (automatically loads overrides when available).
+If you only want to change the colors of the blog, then you open `_sass/hydn/header.scss` , `_sass/hydn/footer.scss`. And then change the variable at the top.
 
-Therefore, your `assets/css/style.scss` should contain the following at minimum:
+And if you customize other things, you can open `_sass` and make new scss file. And add a line of the code at the `_sass/hydn/main.scss` file below.
+
+```sass
+@import "../new_file_name.scss";
+```
+
+
+
+
+Therefore, your `assets/css/style.scss` should contain the following at hydn:
 
 ```sass
 ---
