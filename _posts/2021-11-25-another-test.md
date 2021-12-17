@@ -1,5 +1,5 @@
 ---
-title: "카테고리 테스트"
+title: "The title of this post is really long. I mean, really, REALLY long."
 category: test
 tags: [travel, conference]
 series: [travel-2021]

@@ -8,3 +8,6 @@
 {% capture inner %}{% if author_data %}<a href="{{ author_data.url }}">{{ author_data.name }}</a>{% else %}{{ author }}{% endif %}{% endcapture %}
 {% assign post_author_list = post_author_list | push: inner %}
 {% endfor %}
+
+{% assign one_author_array = nil %}
+{% assign authors = nil %}

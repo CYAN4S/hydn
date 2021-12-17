@@ -1,13 +1,15 @@
-<li>
-  <div class="postlist {{ include.class }}">
-    <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
-    <p class="postlist-excerpt">{{ post.excerpt }}</p>
-    <p class="postlist-date">{{ post.date | date: "%Y/%m/%d" }}</p>
-    <p class="postlist-author">
+<li class="postlist {{ include.class }}">
+  <h3>
+    <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+  </h3>
+  <p class="postlist-excerpt">
+    <a href="{{ post.url | relative_url }}">{{ post.excerpt }}</a>
+  </p>
+  <p class="postlist-date">{{ post.date | date: "%Y/%m/%d" }}</p>
+  <p class="postlist-author">
 
-    {% include post-author-list.html target=post %}
-    {{ post_author_list | join: ", "}}
+  {% include post-author-list.html target=post %}
+  {{ post_author_list | join: ", "}}
 
-    </p>
-  </div>
+  </p>
 </li>
