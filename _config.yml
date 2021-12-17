@@ -21,18 +21,17 @@ disqus_shortname: "hydn"
 # disqus shortname을 입력 ( disqus username이 아님 )
 
 tipue_search:
-     include:
-         pages: false
-         collections: []
-     exclude:
-         files: [search.html, index.html, tagpost.html]
-         categories: []
-         tags: []
+  include:
+    pages: false
+    collections: []
+  exclude:
+    files: [search.html, index.html, tagpost.html]
+    categories: []
+    tags: []
 
 social:
   name: Hydn
   links:
-
 
 navigation: True
 # Navigation bar link를 보여줄건지 여부
@@ -46,6 +45,7 @@ defaults:
       type: "posts"
     values:
       layout: "post"
+      author: "Anonymous"
   - scope:
       path: ""
       type: "category-pages"
@@ -73,20 +73,18 @@ theme: Hydn
 
 sass:
   sass_dir: _sass/hydn
+  style: compressed
 
 collections:
   authors:
     output: true
   category-pages:
     output: true
-    permalink : /:collection/:name
+    permalink: /:collection/:name
   series:
     output: true
-
-sass:
-  style : compressed
 
 paginate: 2
 paginate_path: "/allpost/:num/"
 
-date_format: '%e %B %Y'
+date_format: "%e %B %Y"

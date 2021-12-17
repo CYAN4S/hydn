@@ -1,21 +1,14 @@
 // You can import web fonts at here.
 // If you want to use HTML to import web fonts, go to _layouts/default.
 
-$font-sans: "Pretendard", sans-serif;
-$font-serif: "", serif;
-$font-display: "Outfit", $font-sans;
-$font-mono: "Roboto Mono", "JetBrains Mono", "Consolas", monospace;
-
-$color-primary: #000000;
-$color-link: gray;
-
+@import "./variables.scss";
 
 * {
   margin: 0;
 }
 
 body {
-  font-family: $font-sans;
+  font-family: $font-main;
 }
 
 li {
@@ -24,43 +17,11 @@ li {
 
 a {
   text-decoration: none;
-  color: $color-link;
+  color: $color-text-link;
 }
 
 code, pre {
   font-family: $font-mono;
-}
-
-// .black-nav {
-//   background: black;
-//   width: 30%;
-//   display: flex;
-//   color: white;
-//   padding: 10px;
-//   font-weight: bold;
-// }
-
-// .editior {
-//   align-items: center;
-//   border: 2px solid gray;
-//   margin-top: 10px;
-//   border-radius: 5px;
-//   background: white;
-//   width: 20%;
-// }
-
-.postlist {
-  border-bottom: 1px solid #efefef;
-}
-
-.postlist a {
-  // font-family: "Segoe UI";
-  // font-size: 18px;
-}
-
-.postlist p {
-  color: rgb(80, 79, 79);
-  font-size: 15px;
 }
 
 %flex-center {
@@ -68,11 +29,9 @@ code, pre {
   justify-content: center;
   align-items: center;
 }
-.backgroundimg{
-  display: block;
-  margin: auto;
-}
+
 // Import SASS files at here.
+
 @import "./layout.scss";
 @import "./typo.scss";
 @import "./code.scss";

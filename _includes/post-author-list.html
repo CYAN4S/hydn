@@ -1,0 +1,13 @@
+{% assign one_author_array = "" | split: "" | push: include.target.author %}
+
+{% assign authors = include.target.authors | default: one_author_array %}
+{% assign post_author_list = "" | split: "" %}
+
+{% for author in authors %}
+{% assign author_data = site.authors | where: "short_name", author | first %}
+{% capture inner %}{% if author_data %}<a href="{{ author_data.url }}">{{ author_data.name }}</a>{% else %}{{ author }}{% endif %}{% endcapture %}
+{% assign post_author_list = post_author_list | push: inner %}
+{% endfor %}
+
+{% assign one_author_array = nil %}
+{% assign authors = nil %}

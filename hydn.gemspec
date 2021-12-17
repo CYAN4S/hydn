@@ -3,7 +3,7 @@
 Gem::Specification.new do |spec|
   spec.name          = "hydn"
   spec.version       = "0.1.0"
-  spec.authors       = ["CYAN4S"]
+  spec.authors       = ["CYAN4S", "LeeSangBeom", "Choi youngmin"]
   spec.email         = ["me@cyan4s.com"]
 
   spec.summary       = "Ultimate Jekyll Theme for Blogging."
