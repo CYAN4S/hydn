@@ -1,20 +1,52 @@
 ---
-title: "The title of this post is really long. I mean, really, REALLY long."
+title: "Code Example Post"
 category: test
 tags: [travel, conference]
 series: [travel-2021]
 ---
 
-이것은 David가 작성한 예시 블로그 포스트입니다.
+이것은 코드를 스타일을 위한 예시 포스트 입니다.
 
-## 제목 2
+### html
 
-가치를 창공에 때까지 바이며, 노년에게서 시들어 대중을 능히 뿐이다. 대중을 방지하는 그들의 가치를 크고 그들은 장식하는 석가는 뿐이다. 예가 품에 만물은 현저하게 우리의 할지니, 살았으며, 사랑의 운다. 못할 창공에 행복스럽고 사랑의 내려온 커다란 품으며, 있는가? 든 되려니와, 그들은 칼이다. 내려온 이상의 가는 방지하는 같이, 끝에 웅대한 투명하되 청춘은 아니다. 같이 그러므로 붙잡아 사막이다. 영원히 주며, 가장 만천하의 것이 있는 있는 그것을 동력은 것이다. 인생의 쓸쓸한 같이, 있는가? 살 것이 넣는 대한 청춘의 곧 가치를 인간에 평화스러운 봄바람이다.
+```html
+<html>
+  <head>
+  </head>
+  <body>
+    <p>Hello, World!</p>
+  </body>
+</html>
+```
 
-방지하는 같이, 풀밭에 있으랴? 풀밭에 피가 할지라도 따뜻한 부패를 아름다우냐? 없으면 그들은 그들은 미묘한 무엇이 것은 것이다. 오아이스도 하는 굳세게 얼마나 동력은 일월과 뭇 황금시대다. 이상의 아니한 간에 구하지 길을 그들에게 피다. 아니더면, 찾아 갑 예수는 스며들어 길을 과실이 하는 것이다. 용감하고 간에 청춘 천하를 피다. 전인 심장은 방지하는 청춘의 인간이 부패뿐이다. 얼마나 굳세게 있는 무엇을 그러므로 같은 이것이다. 피어나기 설레는 그들은 놀이 못할 영락과 인생에 밝은 약동하다.
+### javascript
+```javascript
+function animate({ timing, draw, duration }) {
+  let start = performance.now();
+  requestAnimationFrame(function animate(time) {
+    let timeFraction = (time - start) / duration;
+    if (timeFraction > 1) timeFraction = 1;
+    let progress = timing(timeFraction);
+    draw(progress);
+    if (timeFraction < 1) {
+      requestAnimationFrame(animate);
+    }
+  });
+}
+```
 
-### 제목 3
+### python
+```python
+def animate( timing, draw):
+    print("Hello World")
+    return draw
+```
 
-들어 뭇 길을 속에 싹이 열락의 낙원을 피가 것이다. 고동을 하는 싸인 것이다. 만천하의 낙원을 얼음에 소담스러운 무한한 때에, 간에 찾아 것이다.보라, 아니다. 싶이 대한 불어 품에 이성은 그러므로 긴지라 무엇이 것이다. 미인을 그들의 무엇을 뜨거운지라, 거친 싸인 것이다. 크고 되는 눈에 물방아 기관과 무엇이 봄바람을 소금이라 있다. 주며, 뭇 피가 긴지라 그러므로 고행을 찾아 약동하다. 우리 천자만홍이 몸이 하였으며, 황금시대다. 같이, 충분히 만천하의 꽃이 인생에 심장은 것이다. 우리 때에, 하였으며, 무엇을 같지 예수는 것이 이상은 우는 사막이다. 같이, 같지 있는 위하여서.
+### C
+```c
+int example(int a){
+    printf(a);
+    return a;
+}
+```
 
-> 이것은 인용입니다.
