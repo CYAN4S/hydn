@@ -26,9 +26,9 @@ Or install it yourself as:
 $ gem install hydn
 ```
 
-## Contents At-A-Glance
+## Contents
 
-Hydn has been scaffolded by the `jekyll new-theme` command and therefore has all the necessary files and directories to have a new Jekyll site up and running with zero-configuration.
+Hydn basically offers a lot of useful features for blogging including basic Jekyll blog features.
 
 ### Layouts
 
@@ -38,13 +38,13 @@ Refers to files within the `_layouts` directory, that define the markup for your
 - `page.html` &mdash; The layout for your documents that contain FrontMatter, but are not posts
 - `post.html` &mdash; The layout for your posts.
 
-##### _Main Heading and Content-injection_
+#### Main Heading and Content-injection
 
 The _home_ layout will inject all content from your `index.md` / `index.html`. **before** the **`Posts`** heading. This will allow you to include non-posts related content to be published on the landing page under a dedicated heading. *We recommended that you title this section with a Heading2 (`##`)*.
 
 Usually the `site.title` itself would suffice as the implicit 'main-title' for a landing-page. But, if your landing-page would like a heading to be explicitly displayed, then simply define a `title` variable in the document's front matter and it will be rendered with an `<h1>` tag.
 
-##### _Post Listing_
+##### Post Listing
 
 It will be included when your site contains one or more valid posts or drafts.
 
@@ -63,7 +63,7 @@ Refers to snippets of code within the `_includes` directory that can be inserted
 
 Refers to `.scss` files within the `_sass` directory that define the theme's styles.
 
-- `hydn/about_layout.scss` &mdash; Sass partial that defines the blog's About Page' style for layout.
+- `hydn/about_layout.scss` &mdash; Sass partial that defines the blog's About Page style for layout.
 - `hydn/code.scss` &mdash; Sass partial that defines syntax highliting styles for code in your post.
 - `hydn/header.scss` &mdash; Sass partial for resets and defines styles for header
 - `hydn/layout.scss` &mdash; Sass partial for resets and defines each layout's styles for various HTML element
@@ -96,7 +96,6 @@ Have the following line in your config file:
 theme: hydn
 ```
 
-
 ### Customizing templates
 
 To override the default structure and style of hydn, simply create the concerned directory at the root of your site, copy the file you wish to customize to that directory, and then edit the file.
@@ -114,9 +113,6 @@ And if you customize other things, you can open `_sass` and make new scss file. 
 @import "../new_file_name.scss";
 ```
 
-
-
-
 Therefore, your `assets/css/style.scss` should contain the following at hydn:
 
 ```sass
@@ -125,7 +121,6 @@ Therefore, your `assets/css/style.scss` should contain the following at hydn:
 
 @import "hydn/main";
 ```
-
 
 ### Enabling comments (via Disqus)
 
@@ -160,13 +155,14 @@ tipue_search:
          categories: []
          tags: []
 ```
-In this code, `pages: false` means that you don't want to search genera html pages for focusig post's search. 
-And via `exclude`, you can choose file, categories and tags that you don't want to show when you search. 
+
+In this code, `pages: false` means that you don't want to search genera html pages for focusig post's search.
+And via `exclude`, you can choose file, categories and tags that you don't want to show when you search.
 
 
 ### Post Author
 
-From `hydn`, `page.author` is expected to be a mapping of attributes from _authors directory. 
+From `hydn`, `page.author` is expected to be a mapping of attributes from _authors directory.
 If you want to add more registered author, you can add `authorname.html` files in _author directory.  If you add author, you can get author's personal introduce page. Otherwise, you can just display author's name in your post. 
 
 Here is example.
@@ -176,9 +172,9 @@ authors: [ann, Song Kim]
 In this code, ann is the registered author, but Song Kim is not. So when you make is post, only ann has her own introduce page.
 
 
-### Enabling Google Analytics 
+### Enabling Google Analytics
 
-You can get how to enabling google analytics in blog's about page. 
+You can get how to enabling google analytics in blog's about page.
 
 ## Contributing
 

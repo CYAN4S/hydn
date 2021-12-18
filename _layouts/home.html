@@ -18,6 +18,8 @@ layout: default
   {% endif %} 
   {% endfor %}
   <h2>최신 포스트</h2>
-  {% for post in site.posts %} {% include postlist-item.html %} {% endfor %} {%
-  include search.html %}
+  {% for post in site.posts %}
+  {% include postlist-item.html %} 
+  {% endfor %} 
+  {% include search.html %}
 </section>
