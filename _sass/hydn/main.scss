@@ -20,6 +20,14 @@ a {
   color: $color-text-link;
 }
 
+a:hover {
+  text-decoration: underline;
+}
+
+a:visited {
+  color: $color-text-link-visited;
+}
+
 code, pre {
   font-family: $font-mono;
 }

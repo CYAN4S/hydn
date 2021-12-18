@@ -2,11 +2,13 @@
   <h3 class="postlist-title">
     <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
   </h3>
+
   <p class="postlist-excerpt">
-    <a href="{{ post.url | relative_url }}">{{ post.excerpt }}</a>
+    <a href="{{ post.url | relative_url }}">{{ post.excerpt | strip_html }}</a>
   </p>
-  <p class="postlist-date">{{ post.date | date: "%Y/%m/%d" }}</p>
-  <p class="postlist-author">
+
+  <p class="postlist-meta meta">
+  {{ post.date | date: site.date_format }} ·
 
   {% include post-author-list.html target=post %}
   {{ post_author_list | join: ", "}}

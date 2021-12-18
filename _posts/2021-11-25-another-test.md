@@ -7,7 +7,7 @@ series: [travel-2021]
 
 이것은 코드를 스타일을 위한 예시 포스트 입니다.
 
-### html
+## html
 
 ```html
 <html>
@@ -19,7 +19,8 @@ series: [travel-2021]
 </html>
 ```
 
-### javascript
+## javascript
+
 ```javascript
 function animate({ timing, draw, duration }) {
   let start = performance.now();
@@ -35,7 +36,8 @@ function animate({ timing, draw, duration }) {
 }
 ```
 
-### python
+## python
+
 ```python
 def animate( timing, draw):
     print("Hello World")
@@ -43,10 +45,10 @@ def animate( timing, draw):
 ```
 
 ### C
+
 ```c
 int example(int a){
     printf(a);
     return a;
 }
 ```
-

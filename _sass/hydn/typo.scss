@@ -49,6 +49,7 @@ ul {
 p.meta {
   font-size: 14px;
   font-weight: 700;
+  color: $color-text;
 }
 
 h1,
@@ -63,47 +64,7 @@ ul {
   margin: 0;
 }
 
-article {
-  margin: 0 auto;
-  padding: 80px 0 40px;
-  > * {
-    padding: 0 $gap;
-  }
-
-  div[class*="language"] {
-    padding: 0;
-    margin: 20px 0;
-    pre {
-      padding: $gap;
-      line-height: 1.5;
-      border-radius: $gap;
-      overflow: auto;
-      code {
-        color: white;
-      }
-    }
-  }
-
-  a,
-  a > code {
-    color: $color-text-link;
-  }
-
-  img {
-    max-width: 100%;
-  }
-
-  blockquote {
-    background-color: lightgray;
-    margin: 24px 0;
-    padding: 20px;
-    border-radius: 20px;
-    p {
-      margin: 0;
-      color: black;
-    }
-  }
-
+%typo-margin {
   h1 {
     margin-top: $text-margin-top-1;
     margin-bottom: $text-margin-bottom;
@@ -144,6 +105,54 @@ article {
   p.meta {
     margin: 0 0 8px;
   }
+}
+
+.typo-margin {
+  @extend %typo-margin;
+}
+
+article {
+  @extend %typo-margin;
+
+  margin: 0 auto;
+  padding: 40px 0 40px;
+  > * {
+    padding: 0 $gap;
+  }
+
+  div[class*="language"] {
+    padding: 0;
+    margin: 20px 0;
+    pre {
+      padding: $gap;
+      line-height: 1.5;
+      border-radius: $gap;
+      overflow: auto;
+      code {
+        color: white;
+      }
+    }
+  }
+
+  a,
+  a > code {
+    color: $color-text-link;
+  }
+
+  img {
+    max-width: 100%;
+  }
+
+  blockquote {
+    background-color: $color-background-gray;
+    margin: 24px 0;
+    padding: 20px;
+    border-radius: 20px;
+    p {
+      margin: 0;
+      color: $color-text-hard;
+    }
+  }
 
   ol,
   ul {
@@ -152,6 +161,14 @@ article {
 
   li {
     margin: 8px 0;
+  }
+
+  ul ul,
+  ul ol,
+  ol ul,
+  ol ol {
+    margin: 8px 0 8px 32px;
+    padding: 0;
   }
 
   li::marker {
@@ -166,17 +183,9 @@ article {
     list-style-type: disc;
   }
 
-  ul ul,
-  ul ol,
-  ol ul,
-  ol ol {
-    margin: 8px 0 8px 32px;
-    padding: 0;
-  }
-
   table {
     display: block;
-    margin-bottom: 12px;
+    margin-bottom: $text-margin-bottom;
     width: 100%;
     text-align: left;
     border-collapse: collapse;
@@ -186,7 +195,7 @@ article {
       }
     }
     th, td {
-      padding: 4px 6px;
+      padding: 8px 12px;
     }
     th {
       background-color: $color-background-gray;

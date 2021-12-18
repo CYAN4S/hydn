@@ -3,10 +3,13 @@ layout: default
 title: "Categories"
 ---
 
-<section>
+<section class="typo-margin">
+  <h1>모든 카테고리</h1>
+
   {% for category in site.categories %}
 
   {% assign category-page = site.category-pages | where: "title", category[0] | first %}
+  
   {% if category-page %}
   <h2><a href="{{ category-page.url }}">{{ category[0] | upcase }}</a></h2>
   {% else %}
@@ -15,8 +18,9 @@ title: "Categories"
 
   <ul>
     {% for post in category[1] %}
-    <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+    {% include postlist-item.html %}
     {% endfor %}
   </ul>
+
   {% endfor %}
 </section>

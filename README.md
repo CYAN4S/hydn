@@ -77,7 +77,7 @@ Refers to various asset files within the `assets` directory.
 
 - `assets/css/style.scss` &mdash; Imports sass files from within the `_sass` directory and gets processed into the theme's
   stylesheet: `assets/css/styles.css`.
-- `assets/img` &mdash; Image files for our theme. 
+- `assets/img` &mdash; Image files for our theme.
 - `assets/tipuesearch` &mdash; For compose search box in our theme.
 
 ### Plugins
@@ -101,7 +101,6 @@ theme: hydn
 To override the default structure and style of hydn, simply create the concerned directory at the root of your site, copy the file you wish to customize to that directory, and then edit the file.
 
 The site's default CSS has now moved to a new place within the gem itself, [`assets/css/style.scss`](assets/css/style.scss).
-
 
 In hydn, if you only need to customize the colors of the theme, please follow the method below.
 
@@ -159,18 +158,21 @@ tipue_search:
 In this code, `pages: false` means that you don't want to search genera html pages for focusig post's search.
 And via `exclude`, you can choose file, categories and tags that you don't want to show when you search.
 
-
 ### Post Author
 
 From `hydn`, `page.author` is expected to be a mapping of attributes from _authors directory.
-If you want to add more registered author, you can add `authorname.html` files in _author directory.  If you add author, you can get author's personal introduce page. Otherwise, you can just display author's name in your post. 
+
+If you want to add more registered author, you can add `authorname.html` files in _author directory.
+
+If you add author, you can get author's personal introduce page. Otherwise, you can just display author's name in your post.
 
 Here is example.
+
 ```yaml
 authors: [ann, Song Kim]
 ```
-In this code, ann is the registered author, but Song Kim is not. So when you make is post, only ann has her own introduce page.
 
+In this code, ann is the registered author, but Song Kim is not. So when you make is post, only ann has her own introduce page.
 
 ### Enabling Google Analytics
 
@@ -192,3 +194,9 @@ To add a custom directory to your theme-gem, please edit the regexp in `hydn.gem
 ## License
 
 The theme is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
+
+## Contribution
+
+Our goal is to make Hydn usable in common situations. This project still needs a lot of improvements (including this `README.md`). Any kind of contribution is big welcome!
+
+Making roadmap is still in progress.

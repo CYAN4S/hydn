@@ -2,7 +2,7 @@
 layout: default
 ---
 
-<section>
+<section class="typo-margin">
   <h1>{{ page.title | upcase }} 카테고리</h1>
 
   {{ content }}
@@ -10,15 +10,10 @@ layout: default
   <h2>포스트 목록</h2>
 
   <ul>
-    {% for post in site.posts %} {% if post.categories contains page.title or
-    post.category == page.title %}
-    <li>
-      <div>
-        <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
-        <p>{{ post.excerpt }}</p>
-        <p>{{ post.date | date: "%Y/%m/%d" }}</p>
-      </div>
-    </li>
-    {% endif %} {% endfor %}
+    {% for post in site.posts %} 
+    {% if post.categories contains page.title or post.category == page.title %}
+    {% include postlist-item.html %} 
+    {% endif %} 
+    {% endfor %}
   </ul>
 </section>
