@@ -1,8 +1,11 @@
-$footer-background-color:#444;
-$footer-font-color:white;
+$color-footer-background: #444;
+$color-footer-text: $color-dark-text;
 
 footer {
-    background-color: $footer-background-color;
-    color: $footer-font-color;
-    height: 100px;
+  background-color: $color-footer-background;
+  height: 120px;
+
+  section * {
+    color: $color-footer-text;
+  }
 }

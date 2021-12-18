@@ -2,7 +2,7 @@
 layout: default
 ---
 
-<section>
+<section class="typo-margin">
   <h1>{{ page.title | upcase }} 시리즈</h1>
 
   {{ content }}
@@ -11,7 +11,7 @@ layout: default
 
   <ul>
     {% for post in site.posts %} 
-    {% if post.series contains page.title or post.series == page.title %}
+    {% if post.series contains page.short_name or post.series == page.short_name %}
     <li>
       <div>
         <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>

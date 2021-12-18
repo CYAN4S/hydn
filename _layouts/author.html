@@ -41,9 +41,12 @@ layout: default
   </div>
   <br />
   <div>
-    {% assign filtered_posts = site.posts | where: 'author', page.short_name %}
     <ul>
-      {% for post in filtered_posts %} {% include postlist-item.html %} {% endfor %}
+      {% for post in site.posts %} 
+      {% if post.author == page.short_name or post.authors contains page.short_name %}
+      {% include postlist-item.html %}
+      {% endif %}
+      {% endfor %}
     </ul>
   </div>
   <hr/>

@@ -87,4 +87,4 @@ collections:
 paginate: 2
 paginate_path: "/allpost/:num/"
 
-date_format: "%e %B %Y"
+date_format: "%Y/%m/%d"
