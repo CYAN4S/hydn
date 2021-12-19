@@ -68,8 +68,6 @@ defaults:
 plugins:
   - jekyll-seo-tag
 
-theme: Hydn
-
 sass:
   style: compressed
 
