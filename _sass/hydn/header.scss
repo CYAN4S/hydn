@@ -1,4 +1,5 @@
 $header-background-color:#333;
+$header-background-color-hover:#111;
 $header-font-color:white;
 $header-height: 60px;
 
@@ -43,7 +44,7 @@ header {
       }
   
       a:hover:not(.active) {
-        background-color: #111;
+        background-color: $header-background-color-hover;
       }
     }
   }
@@ -67,6 +68,13 @@ header {
       display: flex;
       justify-content: center;
       align-items: center;
+      padding: 0;
+      width: $header-height;
+      height: 100%;
+    }
+
+    label#checkbox-nav-in-header:hover {
+      background-color: $header-background-color-hover;
     }
 
     input#dropdown-nav-in-header:checked ~ nav#nav-in-header {
@@ -75,7 +83,7 @@ header {
       background-color: $header-background-color;
       height: auto;
       top: $header-height;
-      right: $gap;
+      right: 0;
       padding: 0;
 
       ul {
