@@ -1,0 +1,25 @@
+---
+layout: default
+---
+
+<section class="typo-margin">
+  <h1>모든 카테고리</h1>
+
+  {% for category in site.categories %}
+
+  {% assign category-page = site.category-pages | where: "title", category[0] | first %}
+  
+  {% if category-page %}
+  <h2><a href="{{ category-page.url }}">{{ category[0] | upcase }}</a></h2>
+  {% else %}
+  <h2>{{ category[0] | upcase }}</h2>
+  {% endif %}
+
+  <ul>
+    {% for post in category[1] %}
+    {% include postlist-item.html %}
+    {% endfor %}
+  </ul>
+
+  {% endfor %}
+</section>

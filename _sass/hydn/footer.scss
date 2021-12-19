@@ -1,0 +1,33 @@
+$color-footer-background: #444;
+$color-footer-text: $color-dark-text;
+
+footer {
+  background-color: $color-footer-background;
+  min-height: 160px;
+
+  section {
+    > div.flex-container {
+      display: flex;
+      gap: $gap;
+
+      > * {
+        flex: 1;
+
+        * {
+          color: $color-footer-text;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: $breakpoint-tablet) {
+  footer {
+  
+    section {
+      > div.flex-container {
+        flex-direction: column;
+      }
+    }
+  }
+}

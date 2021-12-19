@@ -1,0 +1,29 @@
+$max-width: 1000px;
+$gap: 20px;
+
+$breakpoint-tablet: 800px;
+
+section,
+article {
+  margin: auto;
+  max-width: $max-width;
+  > * {
+    padding-left: $gap;
+    padding-right: $gap;
+  }
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  main {
+    flex: 1 0 auto;
+  }
+}
+
+.post-head-image {
+  height: 300px;
+  width: 100%;
+  object-fit: cover;
+}

@@ -1,0 +1,55 @@
+---
+layout: default
+---
+
+<img src="{{ page.image | relative_url }}"
+     alt="{{ page.name }}'s profile image"
+     alt="편집자 커버 이미지"
+     class="post-head-image"
+/>
+<br />
+<section>
+  <div class = "information">
+    <h1> 편집자 정보  &nbsp </h1>
+    <img src = "{{ 'assets/img/hydn/about_help.png' | relative_url }}"
+         width="5%"
+         height="5%"
+         alt="편집자 정보"
+    />
+  </div>
+  <br />
+  {% include editior.html %}
+  <hr />
+  <div class = "information">
+    <h1>자기소개  &nbsp; </h1>
+    <img src = "{{ 'assets/img/hydn/about_whoami.jpg' | relative_url }}"
+         width="17%"
+         height="17%"
+         alt="자기소개"
+    />
+  </div>
+  <br />
+  <h5> {{ content }} </h5>
+  <hr />
+  <div class = "information">
+    <h1>작성한 글  &nbsp;  </h1>
+    <img src = "{{ 'assets/img/hydn/author_text.png' | relative_url }}"
+         width="7%"
+         height="7%"
+         alt="작성한 글"
+    />
+  </div>
+  <br />
+  <div>
+    <ul>
+      {% for post in site.posts %} 
+      {% if post.author == page.short_name or post.authors contains page.short_name %}
+      {% include postlist-item.html %}
+      {% endif %}
+      {% endfor %}
+    </ul>
+  </div>
+  <hr/>
+</section>
+
+

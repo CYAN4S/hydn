@@ -1,0 +1,104 @@
+$header-background-color:#333;
+$header-background-color-hover:#111;
+$header-font-color:white;
+$header-height: 60px;
+
+header {
+  background-color: $header-background-color;
+  height: $header-height;
+
+  .title {
+    font: 400 24px "Outfit";
+    color: $header-font-color;
+  }
+
+  section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+  }
+
+  nav#nav-in-header {
+    height: 100%;
+  
+    ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      height: 100%;
+    }
+  
+    li {
+      height: 100%;
+      float: left;
+  
+      a {
+        @extend %flex-center;
+        color: $header-font-color;
+        height: 100%;
+        padding: 0 12px;
+        text-decoration: none;
+        font-family: "Outfit";
+        font-weight: 700;
+      }
+  
+      a:hover:not(.active) {
+        background-color: $header-background-color-hover;
+      }
+    }
+  }
+
+  input#dropdown-nav-in-header {
+    display: none;
+  }
+
+  label#checkbox-nav-in-header {
+    display: none;
+  }
+}
+
+@media (max-width: $breakpoint-tablet) {
+  header {
+    nav#nav-in-header {
+      display: none;
+    }
+  
+    label#checkbox-nav-in-header {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 0;
+      width: $header-height;
+      height: 100%;
+    }
+
+    label#checkbox-nav-in-header:hover {
+      background-color: $header-background-color-hover;
+    }
+
+    input#dropdown-nav-in-header:checked ~ nav#nav-in-header {
+      display: block;
+      position: absolute;
+      background-color: $header-background-color;
+      height: auto;
+      top: $header-height;
+      right: 0;
+      padding: 0;
+
+      ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+      }
+    
+      li {
+        height: $header-height;
+        float: none;
+        a {
+          padding: 0 24px;
+        }
+      }
+    }
+  }
+}

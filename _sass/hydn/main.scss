@@ -1,0 +1,48 @@
+// You can import web fonts at here.
+// If you want to use HTML to import web fonts, go to _layouts/default.
+
+@import "./variables.scss";
+
+* {
+  margin: 0;
+}
+
+body {
+  font-family: $font-main;
+}
+
+li {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: $color-text-link;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+a:visited {
+  color: $color-text-link-visited;
+}
+
+code, pre {
+  font-family: $font-mono;
+}
+
+%flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@import "./layout.scss";
+@import "./typo.scss";
+@import "./code.scss";
+@import "./about_layout.scss";
+@import "./tagpost.scss";
+@import "./header.scss";
+@import "./footer.scss";
+@import "./postlist-item.scss";

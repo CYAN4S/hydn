@@ -1,5 +1,60 @@
 ---
 layout: default
+current: post
 ---
 
-{{ content }}
+{% include post-author-list.html target=page %}
+
+{% if page.cover %}
+<img
+  src="{{ page.cover | relative_url }}"
+  alt="Title image of {{ page.title }}"
+  class="post-head-image"
+/>
+{% endif %}
+
+<article>
+
+  <h1>{{ page.title }}</h1>
+
+  <p class="meta">
+    {{ page.date | date: site.date_format }} ·
+    Written by {{ post_author_list | join: ", " }}
+  </p>
+
+ {{ content }}
+</article>
+
+<section>
+  <div class="neighbor">
+    <p class="meta">이전 글</p>
+
+    {% if page.previous %}
+    <p>
+      <a href="{{ page.previous.url | relative_url }}">
+        {{page.previous.title}}
+      </a>
+    </p>
+    {% else %}
+    <p>이전 글이 없습니다.</p>
+    {% endif %}
+
+    <p class="meta">다음 글</p>
+
+    {% if page.next %}
+    <p>
+      <a href="{{ page.next.url | relative_url }}"> {{page.next.title}} </a>
+    </p>
+    {% else %}
+    <p>다음 글이 없습니다.</p>
+    {% endif %}
+  </div>
+</section>
+<section>
+  <script
+    id="dsq-count-scr"
+    src="//hydn-blog-1.disqus.com/count.js"
+    async
+  ></script>
+  {% include comment.html %}
+</section>

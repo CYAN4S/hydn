@@ -1,0 +1,89 @@
+/*  BRAND COLOR
+    - TODO
+*/
+$color-primary: rgb(26, 194, 157);
+$color-primary-light: rgb(110, 240, 212);
+$color-primary-dark: rgb(10, 117, 94);
+
+$color-secondary: rgb(138, 42, 216);
+$color-secondary-light: rgb(171, 83, 243);
+$color-secondary-dark: rgb(92, 23, 148);
+
+
+/*  BACKGROUND COLOR
+    - DIFF color is TODO
+    - GRAY color is TODO
+*/
+$color-background: #f5f5f5;
+$color-background-diff: #f4f4f4;
+$color-background-gray: #e0e0e0;
+
+
+/*  TEXT COLOR
+    - SOFT color is for big text.
+    - HARD color is for text 
+      where more contrast is required (such as quote).
+*/
+$color-text: #0d0d0d;
+$color-text-soft: #333333;
+$color-text-hard: #000000;
+
+$color-text-link: rgb(26, 87, 167);
+$color-text-link-visited: rgb(75, 36, 167);
+
+
+/*  DARK MODE
+    - TODO
+*/
+$color-dark-background: rgb(27, 27, 27);
+$color-dark-background-diff: rgb(14, 14, 14);
+$color-dark-background-gray: rgb(44, 44, 44);
+
+$color-dark-text: rgb(255, 255, 255);
+$color-dark-text-soft: rgb(255, 255, 255);
+$color-dark-text-hard: rgb(255, 255, 255);
+
+$color-dark-text-link: rgb(110, 173, 255);
+$color-dark-text-link-visited: rgb(176, 142, 255);
+
+
+/*  FONT
+    - TODO
+*/
+$font-sans: "Pretendard", "Inter", "Noto Sans KR", sans-serif;
+$font-serif: "Noto Serif KR", serif;
+$font-display: "Outfit", "Montserrat", sans-serif;
+$font-mono: "Roboto Mono", "Jetbrains Mono", "Fira Code", "Fira Mono", monospace;
+$font-main: $font-sans;
+
+
+/*  FONT SIZE
+    - TODO
+*/
+$font-size-p: 1rem;
+
+$font-size-1: 3rem;
+$font-size-2: 2.5rem;
+$font-size-3: 2rem;
+$font-size-4: 1.5rem;
+$font-size-5: 1.25rem;
+$font-size-6: 1rem;
+
+
+/*  TEXT MARGIN FOR POST ARTICLE
+    - IMPORTANT: It applies ONLY in <article> tag.
+*/
+$text-margin-bottom: 1rem;
+$text-margin-top-weight: 1.5;
+
+
+/*  ADVANCED TEXT MARGIN FOR POST ARTICLE
+    - You CAN edit this, but we highly recommend not editing this.
+*/
+$text-margin-top-p: 0;
+$text-margin-top-1: $font-size-1 * $text-margin-top-weight;
+$text-margin-top-2: $font-size-2 * $text-margin-top-weight;
+$text-margin-top-3: $font-size-3 * $text-margin-top-weight;
+$text-margin-top-4: $font-size-4 * $text-margin-top-weight;
+$text-margin-top-5: $font-size-5 * $text-margin-top-weight;
+$text-margin-top-6: $font-size-6 * $text-margin-top-weight;

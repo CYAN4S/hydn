@@ -1,0 +1,9 @@
+.postlist {
+  border-bottom: 1px solid #efefef;
+  margin: 48px 0;
+
+  .postlist-title,
+  .postlist-excerpt {
+    margin-bottom: $text-margin-bottom;
+  }
+}
