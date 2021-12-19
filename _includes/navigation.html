@@ -8,7 +8,7 @@
     <li><a href="{{ '/series' | relative_url }}">SERIES</a></li>
 
     {% for category in site.category-pages %}
-    <li><a href="{{ category.url }}">{{ category.title | upcase }}</a></li>
+    <li><a href="{{ category.url | relative_url }}">{{ category.title | upcase }}</a></li>
     {% endfor %}
   </ul>
 </nav>

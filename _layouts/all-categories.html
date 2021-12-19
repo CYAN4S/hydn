@@ -10,7 +10,7 @@ layout: default
   {% assign category-page = site.category-pages | where: "title", category[0] | first %}
   
   {% if category-page %}
-  <h2><a href="{{ category-page.url }}">{{ category[0] | upcase }}</a></h2>
+  <h2><a href="{{ category-page.url | relative_url }}">{{ category[0] | upcase }}</a></h2>
   {% else %}
   <h2>{{ category[0] | upcase }}</h2>
   {% endif %}
