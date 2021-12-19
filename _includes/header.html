@@ -1,6 +1,15 @@
 <header>
   <section>
     <a href="{{ '/' | relative_url }}" class="title">{{ site.title }}</a>
-    {% include navigation.html class="in-header" %}
+    <input
+      type="checkbox"
+      id="dropdown-nav-in-header"
+      unchecked
+    />
+    <label
+      id="checkbox-nav-in-header"
+      for="dropdown-nav-in-header"
+    ><img src="{{ 'assets/img/hydn/menu_white_24dp.svg' | relative_url }}" alt="Header dropdown icon"></label>
+    {% include navigation.html id="nav-in-header" %}
   </section>
 </header>

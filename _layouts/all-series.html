@@ -8,6 +8,7 @@ layout: default
   {% for series in site.series %}
 
   {% assign series-page = site.series | where: "short_name", series.short_name | first %}
+  
   {% if series-page %}
   <h2><a href="{{ series-page.url }}">{{ series.title }}</a></h2>
   {% else %}

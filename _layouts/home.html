@@ -2,12 +2,14 @@
 layout: default
 ---
 
+{% if page.cover %}
 <img
   class="post-head-image"
   src="{{ page.cover }}"
   height="300px"
   alt="배경 사진"
 />
+{% endif %}
 
 <section class="typo-margin">
   <!-- <h1>{{ site.title }}</h1> -->

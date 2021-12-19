@@ -1,5 +1,11 @@
 # hydn
 
+![Hydn Jekyll Theme](./assets/img/hydn/title.webp)
+
+## IMPORTANT: USE AT YOUR OWN RISK
+
+**This project is still under development, and core features are subject to change without prior notice.**
+
 ## Installation
 
 Add this line to your Jekyll site's `Gemfile`:
