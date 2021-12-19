@@ -5,7 +5,17 @@ footer {
   background-color: $color-footer-background;
   height: 120px;
 
-  section * {
-    color: $color-footer-text;
+  section {
+    > div.flex-container {
+      display: flex;
+
+      > * {
+        flex: auto;
+
+        * {
+          color: $color-footer-text;
+        }
+      }
+    }
   }
 }
